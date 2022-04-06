@@ -6,3 +6,6 @@
 1. 找到要终止的启动命令 ```ps -df | grep 'python test.py'```
 2. 打印相关该命令的id ``` | awk '{print $2}'```
 3. 将命令对应的id传给```| xargs kill -9```, 终止进程
+
+### 当前文件夹下文件个数
+```bash for dic in ./*; do ls -l ./$dic | grep "" | wc -l; done```
